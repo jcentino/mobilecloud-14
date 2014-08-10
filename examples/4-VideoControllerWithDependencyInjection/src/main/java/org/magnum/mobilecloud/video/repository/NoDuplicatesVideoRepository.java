@@ -43,8 +43,9 @@ public class NoDuplicatesVideoRepository implements VideoRepository {
 	// matching titles.
 	@Override
 	public Collection<Video> findByTitle(String title) {
-		Set<Video> matches = new HashSet<>();
-		for(Video video : videoSet){
+		///Set<Video> matches = new HashSet<>();
+        Set<Video> matches = new HashSet();
+        for(Video video : videoSet){
 			if(video.getName().equals(title)){
 				matches.add(video);
 			}
